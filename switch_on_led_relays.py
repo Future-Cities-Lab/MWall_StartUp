@@ -1,0 +1,22 @@
+import RPi.GPIO as GPIO
+
+RELAY_PIN_1 = 18
+RELAY_PIN_2 = 23
+RELAY_PIN_3 = 24
+RELAY_PIN_4 = 25
+
+def main():
+	GPIO.setmode(GPIO.BCM)
+
+	GPIO.setup(RELAY_PIN_1, GPIO.OUT)
+	GPIO.setup(RELAY_PIN_2, GPIO.OUT)
+	GPIO.setup(RELAY_PIN_3, GPIO.OUT)
+	GPIO.setup(RELAY_PIN_4, GPIO.OUT)
+
+	GPIO.output(RELAY_PIN_1, GPIO.HIGH)
+	GPIO.output(RELAY_PIN_2, GPIO.HIGH)
+	GPIO.output(RELAY_PIN_3, GPIO.HIGH)
+	GPIO.output(RELAY_PIN_4, GPIO.HIGH)
+
+if __name__ == "__main__":
+	main()
